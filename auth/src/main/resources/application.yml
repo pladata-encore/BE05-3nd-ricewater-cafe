@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/users?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+
+#jwt:
+#  secret: fdag32fdsavv32few89vbbafdsbaugubdsag8904fdsafdvcxcbre
+#  expiration: 6000000
+
+logging:
+  level:
+    org.springframework.security: trace
+    com.example.auth: info
+server:
+  port: 0
+eureka:
+  client:
+    service-url:
+      defaultZon: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: Hi:imAuth
